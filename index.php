@@ -74,9 +74,9 @@ foreach($data as $post){
 		}
 	}
 	// Build post div
-	$html .= "<div class='post' id='$id'>
-		<!--p>$caption</p-->
-		<img srcset='$path' sizes='$size' src='' />
+	$html .= "<div class=\"post\" id=\"post_{$id}\">
+		<!--p>{$caption}</p-->
+		<img srcset=\"{$path}\" sizes=\"{$size}\" src=\"\" />
 	</div>";
 }
 
