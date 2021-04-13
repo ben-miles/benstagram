@@ -16,9 +16,12 @@
 <body>
 
 <?php 
+require_once './data/variables.php';
 require_once './data/credentials.php';
 require_once './logic/database.php';
 
+
+// TODO: Update filename field in db (remove ".ext")
 // TODO: Frontend for displaying all photos
 // TODO: Lightbox for individual posts
 // TODO: Lazy loading (and SQL)?
@@ -50,7 +53,7 @@ foreach($posts as $k => $v){
 	}
 }
 
-// Output as HTML
+// Output Posts as HTML
 $html = "";
 foreach($data as $post){
 	$id = $post["id"];
@@ -60,11 +63,20 @@ foreach($data as $post){
 	$longitude = $post["longitude"];
 	$file = $post["media"][0]["file"];
 	$type = $post["media"][0]["type"];
-	$path = "./media/posts/" . date("Y",strtotime($date)) . date("m",strtotime($date)) . "/" . $file;
-
+	// Build img srcset
+	$path = $size = "";
+	foreach($image_sizes as $image_key => $image_size){
+		$path .= "./media/{$file}_{$image_size}.{$type} {$image_size}w";
+		$size .= "(min-width: {$image_size}px)";
+		if($image_key + 1 < count($image_sizes)){
+			$path .=", "; 
+			$size .=", ";
+		}
+	}
+	// Build post div
 	$html .= "<div class='post' id='$id'>
 		<!--p>$caption</p-->
-		<img src='$path' />
+		<img srcset='$path' sizes='$size' src='' />
 	</div>";
 }
 
