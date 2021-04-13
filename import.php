@@ -63,6 +63,15 @@ foreach($raw_posts as $index => $post_data){
 		$computed_posts[$date]["media"][$i]["file"] = $file;
 		$i++; 
 	}
+	// Remove extension from file
+	// foreach($media as $media_row){
+	// 	$id = $media_row["id"];
+	// 	$originalfilename = $media_row["file"];
+	// 	echo "Original filename: " . $originalfilename . "<br>";
+	// 	$filenameonly = substr($originalfilename, 0, -4);
+	// 	echo "New filename: " . $filenameonly . "<br><br>";
+	// 	$stmt = DB::run("UPDATE media SET file = ? WHERE id = ?", [$filenameonly, $id]);
+	// }
 	// echo "<br>";
 
 }
