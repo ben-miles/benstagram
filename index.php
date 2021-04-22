@@ -1,25 +1,8 @@
-<!doctype html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="Instagram Clone">
-  <meta name="author" content="SitePoint">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Instagram Clone</title>
-
-
-  <!--link rel="stylesheet" href="css/styles.css?v=1.0"-->
-
-</head>
-
-<body>
-
 <?php 
-require_once './data/variables.php';
-require_once './data/credentials.php';
-require_once './logic/database.php';
 
+require "./data/variables.php";
+require "./data/credentials.php";
+require "./logic/database.php";
 
 // TODO: Update filename field in db (remove ".ext")
 // TODO: Frontend for displaying all photos
@@ -89,3 +72,21 @@ echo $html;
 <!--script src="js/scripts.js"></script-->
 </body>
 </html>
+
+// Routing
+$request = $_SERVER['REQUEST_URI'];
+switch ($request) {
+    case '/' :
+        require "./view/portfolio.php";
+        break;
+    case '' :
+        require "./view/portfolio.php";
+        break;
+    case '/about' :
+        require __DIR__ . '/views/about.php';
+        break;
+    default:
+        http_response_code(404);
+        require __DIR__ . '/views/404.php';
+        break;
+}
