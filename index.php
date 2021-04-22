@@ -15,10 +15,8 @@ require "./logic/database.php";
 // Routing
 $request = $_SERVER['REQUEST_URI'];
 switch ($request) {
-    case '/' :
-        require "./view/portfolio.php";
-        break;
     case '' :
+    case '/' :
         require "./view/portfolio.php";
         break;
     case '/about' :
