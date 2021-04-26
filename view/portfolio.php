@@ -50,7 +50,7 @@ foreach($data as $post){
 	// Build img srcset
 	$path = $size = "";
 	foreach($image_sizes as $image_key => $image_size){
-		$path .= "./media/{$file}_{$image_size}.{$type} {$image_size}w";
+		$path .= "./media/{$file}_{$image_size}.jpg {$image_size}w";
 		$size .= "(min-width: {$image_size}px)";
 		if($image_key + 1 < count($image_sizes)){
 			$path .=", "; 
