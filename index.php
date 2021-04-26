@@ -19,9 +19,6 @@ switch ($request) {
     case '/' :
         require "./view/portfolio.php";
         break;
-    case '/about' :
-        require __DIR__ . '/views/about.php';
-        break;
     default:
         http_response_code(404);
         require "./view/404.php";
