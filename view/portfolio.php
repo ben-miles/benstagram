@@ -89,10 +89,10 @@ require "./template/header.php";
 <section id="portfolio" class="portfolio">
 	<div class="container">
 
-        <div class="section-title">
+        <!--<div class="section-title">
 			<h2>Portfolio</h2>
 			<p>Sit sint consectetur velit quisquam cupiditate impedit suscipit</p>
-        </div>
+        </div>-->
 
 		<ul id="portfolio-flters">
 			<li data-filter="*" class="filter-active">All</li>
