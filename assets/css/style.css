@@ -28,6 +28,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# Bootstrap overrides
+--------------------------------------------------------------*/
+.container {
+	max-width: unset;
+}
+@media (min-width: 736px) {
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+@media (min-width: 990px) {
+	.container {
+		max-width: 930px;
+	}
+}
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
@@ -699,7 +717,7 @@ section {
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio {
-  padding: 100px 0;
+  padding: 60px 0;
 }
 
 .portfolio #portfolio-flters {
@@ -746,7 +764,17 @@ section {
   position: relative;
   /* height: 360px; */
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+@media (min-width: 736px) {
+	.portfolio .portfolio-item {
+		margin-bottom: 28px;
+		padding-left: 14px;
+		padding-right: 14px;
+	}
 }
 
 .portfolio .portfolio-item figure {
@@ -757,6 +785,7 @@ section {
   /* border-radius: 4px; */
   margin: 0;
 }
+
 
 .portfolio .portfolio-item figure:hover img {
   opacity: 0.4;

@@ -103,19 +103,15 @@ require "./template/header.php";
 			<p>Sit sint consectetur velit quisquam cupiditate impedit suscipit</p>
         </div>
 
-        <div class="row justify-content-center">
-			<div class="col-lg-8">
-				<ul id="portfolio-flters">
-					<li data-filter="*" class="filter-active">All</li>
-					<li data-filter=".filter-app">App</li>
-					<li data-filter=".filter-card">Card</li>
-					<li data-filter=".filter-web">Web</li>
-				</ul>
-				<div class="row portfolio-container">
-					<?php echo $html; ?>
-        		</div>
-			</div>
-        </div>
+		<ul id="portfolio-flters">
+			<li data-filter="*" class="filter-active">All</li>
+			<li data-filter=".filter-app">App</li>
+			<li data-filter=".filter-card">Card</li>
+			<li data-filter=".filter-web">Web</li>
+		</ul>
+		<div class="row portfolio-container">
+			<?php echo $html; ?>
+		</div>
 
     </div>
 </section><!-- End Portfolio Section -->
