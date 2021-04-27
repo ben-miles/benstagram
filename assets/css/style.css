@@ -13,6 +13,10 @@ body {
   color: #444444;
 }
 
+main {
+	margin-top: 70px;
+}
+
 a {
   color: #3498db;
   text-decoration: none;
@@ -82,7 +86,8 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 70px;
+  /* height: 70px; */
+  padding: 15px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
