@@ -83,18 +83,9 @@ require "./template/header.php";
 
 ?>
 
+<!-- ======= Stories Section ======= -->
+
 <!-- ======= Portfolio Section ======= -->
-
-<!-- Move to CSS file -->
-<style>
-	.badge-meta {
-		position: absolute;
-		top: 10px;
-		right: 20px;
-		z-index: 10;
-	}
-</style>
-
 <section id="portfolio" class="portfolio">
 	<div class="container">
 
