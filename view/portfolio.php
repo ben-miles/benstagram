@@ -1,10 +1,21 @@
 <?php
 
+// Retrieve user data
+$user = DB::run("SELECT * FROM users")->fetchAll();
+$user_bio = $user[0]["bio"];
+$user_name = $user[0]["name"];
+$user_photo = $root . "/media/" . $user[0]["photo"] . ".jpg";
+$user_username = $user[0]["username"];
+
 // Retrieve all media
 $media = DB::run("SELECT * FROM media")->fetchAll();
 
 // Retrieve all posts
 $posts = DB::run("SELECT * FROM posts")->fetchAll();
+
+// Get post count
+$post_count = count($posts);
+// echo $post_count;
 
 // Reverse order (newest first)
 krsort($posts);
@@ -82,6 +93,25 @@ foreach($data as $post){
 require "./template/header.php";
 
 ?>
+<!-- ======= Bio Section ======= -->
+<section id="bio" class="bio">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2">
+				<div class="row">
+					<div class="col-4">
+						<img src="<?php echo $user_photo; ?>" class="img-fluid" style="border-radius: 50%;" />
+					</div>
+					<div class="col-4">
+						<h2><?php echo $user_username; ?></h2>
+						<b><?php echo $post_count; ?> posts</b>
+						<p><?php echo $user_bio; ?></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <!-- ======= Stories Section ======= -->
 
