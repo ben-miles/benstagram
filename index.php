@@ -1,8 +1,8 @@
 <?php 
 
-require "./data/variables.php";
-require "./data/credentials.php";
-require "./logic/database.php";
+require "data/variables.php";
+require "data/credentials.php";
+require "logic/database.php";
 
 // TODO: Lightbox for individual posts
 // TODO: Lazy loading (and SQL)?
@@ -17,10 +17,10 @@ $request = $_SERVER['REQUEST_URI'];
 switch ($request) {
     case '' :
     case '/' :
-        require "./view/portfolio.php";
+        require "view/portfolio.php";
         break;
     default:
         http_response_code(404);
-        require "./view/404.php";
+        require "view/404.php";
         break;
 }
