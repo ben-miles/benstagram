@@ -76,10 +76,10 @@ foreach($data as $post){
 			<figure>
 				<img srcset=\"{$path}\" sizes=\"{$size}\" class=\"img-fluid\" alt=\"{$caption}\" />
 				<a href=\"./media/{$file}.{$type}\" data-gallery=\"portfolioGallery\" class=\"link-preview portfolio-lightbox\" title=\"{$caption}\">
-					<i class=\"bx bx-plus\"></i>
+					<i class=\"bi bi-plus\"></i>
 				</a>
 				<a href=\"portfolio-details.html\" class=\"link-details\" title=\"More Details\">
-					<i class=\"bx bx-link\"></i>
+					<i class=\"bi bi-link\"></i>
 				</a>
 			</figure>
 			<!--div class=\"portfolio-info\">
@@ -104,13 +104,13 @@ require "./template/header.php";
 <section id="bio" class="bio">
 	<div class="container">
 		<div class="row">
-			<div class="col-2">
+			<div class="col-2 col-lg-4">
 				<img src="<?php echo $user_photo; ?>" class="img-fluid" id="profile-photo" style="border-radius: 50%;" />
 			</div>
-			<div class="col-10">
+			<div class="col-10 col-lg-8">
 				<h2><?php echo $user_username; ?></h2>
 				<b><?php echo $post_count; ?> posts</b>
-				<h2><?php echo $user_name; ?></h2>
+				<h1><?php echo $user_name; ?></h1>
 				<p><?php echo $user_bio; ?></p>
 			</div>
 		</div>
