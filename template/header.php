@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Ben Miles' Photoblog | BCGM3</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+	<title>Ben Miles Photoblog | Benstagram</title>
+	<meta name="description" content="Photoblog of Benjamin Miles.">
+	<meta name="author" content="Benjamin Miles">
 
   <!-- Favicons -->
   <link href="<?php echo $root; ?>/assets/img/favicon.png" rel="icon">
