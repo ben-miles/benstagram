@@ -18,7 +18,7 @@ main {
 }
 
 a {
-  color: #3498db;
+  color: #00376b;
   text-decoration: none;
 }
 
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #3498db;
+  background: #00376b;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-social-links a:hover {
-  color: #3498db;
+  color: #00376b;
 }
 
 @media (max-width: 768px) {
@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar a:hover, .navbar .active, .navbar li:hover > a {
-  color: #3498db;
+  color: #00376b;
 }
 
 .navbar .dropdown ul {
@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #3498db;
+  color: #00376b;
 }
 
 .navbar .dropdown:hover > ul {
@@ -313,7 +313,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #3498db;
+  color: #00376b;
 }
 
 .navbar-mobile .getstarted {
@@ -345,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  color: #3498db;
+  color: #00376b;
 }
 
 .navbar-mobile .dropdown > .dropdown-active {
@@ -388,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h1 span {
-  border-bottom: 4px solid #3498db;
+  border-bottom: 4px solid #00376b;
 }
 
 #hero h2 {
@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   transition: ease-in-out 0.3s;
   color: #fff;
-  background: #3498db;
+  background: #00376b;
   text-transform: uppercase;
 }
 
@@ -474,7 +474,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #3498db;
+  background: #00376b;
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -482,6 +482,14 @@ section {
 .section-title p {
   margin-bottom: 0;
 }
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+/* #profile-photo {
+	max-width: 75px;
+	height: auto;
+} */
 
 /*--------------------------------------------------------------
 # What We Do
@@ -507,7 +515,7 @@ section {
 }
 
 .what-we-do .icon-box .icon i {
-  color: #3498db;
+  color: #00376b;
   font-size: 28px;
 }
 
@@ -534,7 +542,7 @@ section {
 }
 
 .what-we-do .icon-box:hover h4 a, .what-we-do .icon-box:hover .icon i {
-  color: #3498db;
+  color: #00376b;
 }
 
 /*--------------------------------------------------------------
@@ -569,7 +577,7 @@ section {
   left: 0;
   top: 0;
   font-size: 22px;
-  color: #3498db;
+  color: #00376b;
 }
 
 .about .icon-boxes {
@@ -584,7 +592,7 @@ section {
 
 .about .icon-boxes i {
   font-size: 48px;
-  color: #3498db;
+  color: #00376b;
 }
 
 .about .icon-boxes p {
@@ -650,7 +658,7 @@ section {
   left: 50%;
   transform: translateX(-50%);
   font-size: 20px;
-  background: #3498db;
+  background: #00376b;
   padding: 12px;
   color: #fff;
   border-radius: 50px;
@@ -687,7 +695,7 @@ section {
 
 .services .icon-box i {
   float: left;
-  color: #3498db;
+  color: #00376b;
   font-size: 40px;
   line-height: 0;
 }
@@ -715,7 +723,7 @@ section {
 }
 
 .services .icon-box:hover h4 a {
-  color: #3498db;
+  color: #00376b;
 }
 
 /*--------------------------------------------------------------
@@ -748,7 +756,7 @@ section {
 }
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-  background: #3498db;
+  background: #00376b;
   color: #fff;
 }
 
@@ -820,7 +828,7 @@ section {
 }
 
 .portfolio .portfolio-item figure .link-preview:hover, .portfolio .portfolio-item figure .link-details:hover {
-  background: #3498db;
+  background: #00376b;
 }
 
 .portfolio .portfolio-item figure .link-preview:hover i, .portfolio .portfolio-item figure .link-details:hover i {
@@ -868,7 +876,7 @@ section {
 }
 
 .portfolio .portfolio-item .portfolio-info h4 a:hover {
-  color: #3498db;
+  color: #00376b;
 }
 
 .portfolio .portfolio-item .portfolio-info p {
@@ -908,11 +916,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #3498db;
+  border: 1px solid #00376b;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #3498db;
+  background-color: #00376b;
 }
 
 .portfolio-details .portfolio-info {
@@ -1018,11 +1026,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #3498db;
+  border: 1px solid #00376b;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #3498db;
+  background-color: #00376b;
 }
 
 /*--------------------------------------------------------------
@@ -1071,7 +1079,7 @@ section {
 }
 
 .team .member .social a:hover {
-  color: #3498db;
+  color: #00376b;
 }
 
 .team .member .social i {
@@ -1090,7 +1098,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #3498db;
+  color: #00376b;
   float: left;
   width: 44px;
   height: 44px;
@@ -1118,7 +1126,7 @@ section {
 }
 
 .contact .info:hover i {
-  background: #3498db;
+  background: #00376b;
   color: #fff;
 }
 
@@ -1198,7 +1206,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #3498db;
+  background: #00376b;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1327,7 +1335,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #3498db;
+  color: #00376b;
   font-size: 18px;
   line-height: 1;
 }
@@ -1351,7 +1359,7 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #3498db;
+  color: #00376b;
 }
 
 #footer .footer-newsletter {
@@ -1391,7 +1399,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px 2px 20px;
-  background: #3498db;
+  background: #00376b;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
@@ -1411,7 +1419,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #3498db;
+  background: #00376b;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
