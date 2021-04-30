@@ -4,7 +4,7 @@
 $user = DB::run("SELECT * FROM users")->fetchAll();
 $user_bio = $user[0]["bio"];
 $user_name = $user[0]["name"];
-$user_photo = $root . "/media/" . $user[0]["photo"] . ".jpg";
+$user_photo = $root . "/media/" . $user[0]["photo"] . "_320.jpg";
 $user_username = $user[0]["username"];
 
 // Retrieve all media
