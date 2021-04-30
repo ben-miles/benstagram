@@ -104,17 +104,14 @@ require "./template/header.php";
 <section id="bio" class="bio">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8 offset-lg-2">
-				<div class="row">
-					<div class="col-4">
-						<img src="<?php echo $user_photo; ?>" class="img-fluid" style="border-radius: 50%;" />
-					</div>
-					<div class="col-4">
-						<h2><?php echo $user_username; ?></h2>
-						<b><?php echo $post_count; ?> posts</b>
-						<p><?php echo $user_bio; ?></p>
-					</div>
-				</div>
+			<div class="col-2">
+				<img src="<?php echo $user_photo; ?>" class="img-fluid" id="profile-photo" style="border-radius: 50%;" />
+			</div>
+			<div class="col-10">
+				<h2><?php echo $user_username; ?></h2>
+				<b><?php echo $post_count; ?> posts</b>
+				<h2><?php echo $user_name; ?></h2>
+				<p><?php echo $user_bio; ?></p>
 			</div>
 		</div>
 	</div>
