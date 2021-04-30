@@ -34,14 +34,17 @@
 
 			<div class="col">
 				<div class="logo me-auto">
-					<h1 class="d-none"><a href="<?php echo $root; ?>/">Benstagram</a></h1>
-					<a href="<?php echo $root; ?>/"><img src="<?php echo $root; ?>/media/bens-gram_logo.png" alt="" class="img-fluid" style="max-width: 103px;"></a>
+					<a href="<?php echo $root; ?>/"><h1 class="d-none">Benstagram</h1><img src="<?php echo $root; ?>/media/bens-gram_logo.png" alt="" class="img-fluid" style="max-width: 103px;"></a>
 				</div>
 			</div>
 
 			<div class="col">
 				<form>
-					<input type="text" id="search" style="float:right;" />
+					<!-- <input type="text" id="search" style="float:right;" /> -->
+					<div class="input-group">
+						<span class="input-group-text" id="search-label"><i class="bi bi-search"></i></span>
+						<input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-label">
+					</div>
 				</form>
 			</div>
 

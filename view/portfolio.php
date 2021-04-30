@@ -105,7 +105,7 @@ require "./template/header.php";
 	<div class="container">
 		<div class="row">
 			<div class="col-2 col-lg-4">
-				<img src="<?php echo $user_photo; ?>" class="img-fluid" id="profile-photo" style="border-radius: 50%;" />
+				<img src="<?php echo $user_photo; ?>" class="img-fluid" id="profile-photo" alt="<?php echo $user_name; ?> Profile Photo" style="border-radius: 50%;" />
 			</div>
 			<div class="col-10 col-lg-8">
 				<h2><?php echo $user_username; ?></h2>
