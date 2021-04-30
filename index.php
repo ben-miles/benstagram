@@ -19,6 +19,12 @@ switch ($request) {
     case '/' :
         require "view/portfolio.php";
         break;
+	case '/login' :
+		require "view/login.php";
+		break;
+	case '/post' :
+		require "view/post.php";
+		break;
     default:
         http_response_code(404);
         require "view/404.php";
