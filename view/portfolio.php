@@ -35,6 +35,7 @@ foreach($posts as $k => $v){
 
 // Output Posts as HTML
 $html = "";
+$i = 1;
 foreach($data as $post){
 	$id = $post["id"];
 	$caption = $post["caption"];
@@ -88,6 +89,12 @@ foreach($data as $post){
 			</div-->
 		</div>
 	</div>";
+
+	// Iterate sentinel, break at a low number to reduce initial payload
+	if( $i == 18 ){
+		break;
+	}
+	$i++;
 }
 
 require "./template/header.php";
