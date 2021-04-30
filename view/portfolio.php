@@ -73,7 +73,7 @@ foreach($data as $post){
 		<div class=\"portfolio-wrap\">
 			{$badge}
 			<figure>
-				<img srcset=\"{$path}\" sizes=\"{$size}\" class=\"img-fluid\" alt=\"\" />
+				<img srcset=\"{$path}\" sizes=\"{$size}\" class=\"img-fluid\" alt=\"{$caption}\" />
 				<a href=\"./media/{$file}.{$type}\" data-gallery=\"portfolioGallery\" class=\"link-preview portfolio-lightbox\" title=\"{$caption}\">
 					<i class=\"bx bx-plus\"></i>
 				</a>
