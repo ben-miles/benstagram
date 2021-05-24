@@ -12,14 +12,14 @@ $submitted_password = $_POST["login-password"];
 // If submitted email doesn't exist in DB, return error
 $user_found = DB::run("SELECT * FROM users WHERE email=?", [$submitted_email])->fetch();
 if(!$user_found){
-	echo "|e|No user with that email address exists.";
+	echo "|danger|Error: No user with that email address exists.";
 	exit;
 }
 
 // Verify the submitted password
 $password_matches = password_verify($submitted_password, $user_found['password'] );
 if(!$password_matches){
-	echo "|e|Password does not match.";
+	echo "|danger|Error: Incorrect password.";
 	exit;
 }
 
@@ -27,4 +27,4 @@ if(!$password_matches){
 $_SESSION['user_id'] = $user_found['id'];
 
 // Return status message
-echo "|s|Logged in successfully.";
+echo "|success|Success: Logged in.|redirect|/";

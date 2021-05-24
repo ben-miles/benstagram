@@ -7,6 +7,7 @@
         <div class="section-title">
           	<h2>Log In</h2>
           	<form id="form-login" action="/login-logic">
+			  	<div id="response-container"></div>
 				<div class="mb-3">
 					<label for="login-email" class="form-label">Email address</label>
 					<input type="email" class="form-control" id="login-email" name="login-email" aria-describedby="login-email-help">

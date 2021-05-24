@@ -12,7 +12,7 @@ $submitted_password = $_POST["signup-password"];
 // If submitted email already exists in DB, return error
 $email_exists = DB::run("SELECT id FROM users WHERE email=?", [$submitted_email])->fetch();
 if($email_exists){
-	echo "|e|A user with that email address already exists.";
+	echo "|danger|Error: A user with that email address already exists.";
 	exit;
 }
 
@@ -28,7 +28,7 @@ $new_user_id = DB::lastInsertId();
 
 // Return status message
 if(!$new_user_id){
-	echo "|e|New user insert failed.";
+	echo "|danger|Error: New user insert failed.";
 	exit;
 }
-echo "|s|New user created.";
+echo "|success|Success: New user created.";

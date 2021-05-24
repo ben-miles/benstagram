@@ -194,6 +194,9 @@
    */
 	 window.ajaxFormSubmit = function(route){
 		var elements = document.getElementsByTagName("input");
+		var responseContainer = document.getElementById("response-container");
+		// Clear any previous responses from frontend
+		responseContainer.innerHTML = "";
 		var formData = new FormData(); 
 		for(var i=0; i<elements.length; i++){
 			formData.append(elements[i].name, elements[i].value);
@@ -201,8 +204,33 @@
 		var xmlHttp = new XMLHttpRequest();
 			xmlHttp.onreadystatechange = function(){
 				if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
-					// response
-					alert(xmlHttp.responseText);
+					// Get response (|status|message|action|parameters)
+					var response = xmlHttp.responseText;
+					var status, message, action, parameters;
+					// Treat any improperly formatted response as an error
+					if(response.charAt(0) != "|"){
+						status = "danger";
+						message = "Error: Unexpected response: " + response;
+					}
+					// Explode properly formatted response on pipe character
+					var response_parts = response.split("|");
+					status = response_parts[1];
+					message = response_parts[2];
+					action = response_parts[3];
+					parameters = response_parts[4];
+					// Build formatted response
+					var formattedResponse = document.createElement("div");
+					formattedResponse.className = "alert alert-" + status;
+					formattedResponse.innerHTML = message;
+					// Send formatted response back to frontend
+					responseContainer.appendChild(formattedResponse);
+					// Perform any additional actions, if applicable
+					if(action == "redirect"){
+						setTimeout(function(){
+							window.location.replace(parameters)
+						}, 
+						3000);
+					}
 				}
 			}
 			xmlHttp.open("post", route); 
