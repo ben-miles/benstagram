@@ -17,14 +17,14 @@ if(!$user_found){
 }
 
 // Verify the submitted password
-$password_matches = password_verify($submitted_password, $user_found['password'] );
+$password_matches = password_verify($submitted_password, $user_found["password"] );
 if(!$password_matches){
 	echo "|danger|Error: Incorrect password.";
 	exit;
 }
 
 // Set retrieved user data in session 
-$_SESSION['user_id'] = $user_found['id'];
+$_SESSION["user_id"] = $user_found["id"];
 
 // Return status message
 echo "|success|Success: Logged in.|redirect|/";

@@ -1,24 +1,24 @@
 <?php
 // Routing
-$request = $_SERVER['REQUEST_URI'];
+$request = $_SERVER["REQUEST_URI"];
 switch ($request) {
-    case '' :
-    case '/' :
+    case "" :
+    case "/" :
         require "view/portfolio.php";
         break;
-	case '/login' :
+	case "/login" :
 		require "view/login.php";
 		break;
-	case '/login-logic' :
+	case "/login-logic" :
 		require "logic/login.php";
 		break;
-	case '/signup' :
+	case "/signup" :
 		require "view/signup.php";
 		break;
-	case '/signup-logic' :
+	case "/signup-logic" :
 		require "logic/signup.php";
 		break;
-	case '/post' :
+	case "/post" :
 		require "view/post.php";
 		break;
     default:
