@@ -12,6 +12,9 @@ switch ($request) {
 	case "/login-logic" :
 		require "logic/login.php";
 		break;
+	case "/logout" :
+		require "logic/logout.php";
+		break;
 	case "/signup" :
 		require "view/signup.php";
 		break;
