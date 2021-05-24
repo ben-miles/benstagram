@@ -30,54 +30,68 @@
 	<!-- ======= Header ======= -->
 	<header id="header" class="fixed-top d-flex align-items-center">
 		<div class="container">
-		<div class="row d-flex justify-content-between">
+			<div class="row d-flex justify-content-between">
 
-			<div class="col">
-				<div class="logo me-auto">
-					<a href="<?php echo $root; ?>/"><h1 class="d-none">Benstagram</h1><img src="<?php echo $root; ?>/media/bens-gram_logo.png" alt="" class="img-fluid" style="max-width: 103px;"></a>
-				</div>
-			</div>
-
-			<div class="col">
-				<form>
-					<!-- <input type="text" id="search" style="float:right;" /> -->
-					<div class="input-group">
-						<span class="input-group-text" id="search-label"><i class="bi bi-search"></i></span>
-						<input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-label">
+				<div class="col">
+					<div class="logo me-auto">
+						<a href="<?php echo $root; ?>/"><h1 class="d-none">Benstagram</h1><img src="<?php echo $root; ?>/media/bens-gram_logo.png" alt="" class="img-fluid" style="max-width: 103px;"></a>
 					</div>
-				</form>
-			</div>
+				</div>
 
-			<!--<nav id="navbar" class="navbar order-last order-lg-0">
-			<ul>
-				<li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-				<li><a class="nav-link scrollto" href="#about">About</a></li>
-				<li><a class="nav-link scrollto" href="#services">Services</a></li>
-				<li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-				<li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
-				<li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-				<ul>
-					<li><a href="#">Drop Down 1</a></li>
-					<li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+				<div class="col">
+					<form>
+						<div class="input-group">
+							<span class="input-group-text" id="search-label"><i class="bi bi-search"></i></span>
+							<input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-label">
+						</div>
+					</form>
+				</div>
+				
+				<div class="col">
+					<nav id="navbar" class="navbar justify-content-end">
+						<ul>
+							<?php 
+								if(isset($_SESSION["user_id"])){
+									echo "<li><a href=\"$root/post\" target=\"_self\">New Post</a></li>";
+									echo "<li><a href=\"$root/logout\" target=\"_self\">Log Out</a></li>";
+								} else {
+									echo "<li><a href=\"$root/login\" target=\"_self\">Log In</a></li>";
+								}
+							?>							
+						</ul>
+					</nav>
+				</div>
+
+				<!--<nav id="navbar" class="navbar order-last order-lg-0">
 					<ul>
-						<li><a href="#">Deep Drop Down 1</a></li>
-						<li><a href="#">Deep Drop Down 2</a></li>
-						<li><a href="#">Deep Drop Down 3</a></li>
-						<li><a href="#">Deep Drop Down 4</a></li>
-						<li><a href="#">Deep Drop Down 5</a></li>
+						<li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+						<li><a class="nav-link scrollto" href="#about">About</a></li>
+						<li><a class="nav-link scrollto" href="#services">Services</a></li>
+						<li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+						<li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
+						<li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+						<ul>
+							<li><a href="#">Drop Down 1</a></li>
+							<li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+							<ul>
+								<li><a href="#">Deep Drop Down 1</a></li>
+								<li><a href="#">Deep Drop Down 2</a></li>
+								<li><a href="#">Deep Drop Down 3</a></li>
+								<li><a href="#">Deep Drop Down 4</a></li>
+								<li><a href="#">Deep Drop Down 5</a></li>
+							</ul>
+							</li>
+							<li><a href="#">Drop Down 2</a></li>
+							<li><a href="#">Drop Down 3</a></li>
+							<li><a href="#">Drop Down 4</a></li>
+						</ul>
+						</li>
+						<li><a class="nav-link scrollto" href="#contact">Contact</a></li>
 					</ul>
-					</li>
-					<li><a href="#">Drop Down 2</a></li>
-					<li><a href="#">Drop Down 3</a></li>
-					<li><a href="#">Drop Down 4</a></li>
-				</ul>
-				</li>
-				<li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-			</ul>
-			<i class="bi bi-list mobile-nav-toggle"></i>
-			</nav> -->
+					<i class="bi bi-list mobile-nav-toggle"></i>
+				</nav> -->
 
-		</div>
+			</div>
 		</div>
 	</header><!-- End Header -->
 
