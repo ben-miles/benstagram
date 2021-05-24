@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 require "data/variables.php";
 require "data/credentials.php";
 require "logic/database.php";
