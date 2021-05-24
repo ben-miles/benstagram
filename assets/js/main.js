@@ -155,23 +155,6 @@
   });
 
   /**
-   * Skills animation
-   */
-//   let skilsContent = select('.skills-content');
-//   if (skilsContent) {
-//     new Waypoint({
-//       element: skilsContent,
-//       offset: '80%',
-//       handler: function(direction) {
-//         let progress = select('.progress .progress-bar', true);
-//         progress.forEach((el) => {
-//           el.style.width = el.getAttribute('aria-valuenow') + '%'
-//         });
-//       }
-//     })
-//   }
-
-  /**
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
@@ -206,50 +189,24 @@
     selector: '.portfolio-lightbox'
   });
 
-  /**
-   * Portfolio details slider
+    /**
+   * AJAX Form Submit 
    */
-//   new Swiper('.portfolio-details-slider', {
-//     speed: 400,
-//     loop: true,
-//     autoplay: {
-//       delay: 5000,
-//       disableOnInteraction: false
-//     },
-//     pagination: {
-//       el: '.swiper-pagination',
-//       type: 'bullets',
-//       clickable: true
-//     }
-//   });
-
-  /**
-   * Testimonials slider
-   */
-//   new Swiper('.testimonials-slider', {
-//     speed: 600,
-//     loop: true,
-//     autoplay: {
-//       delay: 5000,
-//       disableOnInteraction: false
-//     },
-//     slidesPerView: 'auto',
-//     pagination: {
-//       el: '.swiper-pagination',
-//       type: 'bullets',
-//       clickable: true
-//     },
-//     breakpoints: {
-//       320: {
-//         slidesPerView: 1,
-//         spaceBetween: 20
-//       },
-
-//       1200: {
-//         slidesPerView: 3,
-//         spaceBetween: 20
-//       }
-//     }
-//   });
+	 window.ajaxFormSubmit = function(route){
+		var elements = document.getElementsByTagName("input");
+		var formData = new FormData(); 
+		for(var i=0; i<elements.length; i++){
+			formData.append(elements[i].name, elements[i].value);
+		}
+		var xmlHttp = new XMLHttpRequest();
+			xmlHttp.onreadystatechange = function(){
+				if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+					// response
+					alert(xmlHttp.responseText);
+				}
+			}
+			xmlHttp.open("post", route); 
+			xmlHttp.send(formData); 
+	}
 
 })()
