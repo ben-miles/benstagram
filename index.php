@@ -7,8 +7,9 @@ require "logic/routing.php";
 
 // TODOs:
 // - Lightbox for individual posts
-// - Lazy loading (and SQL)?
+// - Lazy loading (and SQL)? Start with a button for manually loading more
 // - Update URL on click of images
 // - Add new post / File upload -- Start out simple, no image editing in-app, use Camera app for that. Then add ImageMagick(?) for automating thumbnails
 // - Interactivity? Think I want to avoid "likes" and maybe even "comments"
 // - Add fields to Signup View
+// - Get rid of Bootstrap
