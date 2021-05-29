@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="section-title">
 			<h2>Sign Up</h2>
-			<form id="form-signup" action="/signup-logic">
+			<form id="form-signup" class="ajax-form" action="/signup-logic" enctype="multipart/form-data" method="post">
 				<div id="response-container"></div>
 				<div class="mb-3">
 					<label for="signup-email" class="form-label">Email address</label>
@@ -22,6 +22,4 @@
 	</div>
 </section>
 
-<?php 
-$script = "signup";
-require "./template/footer.php"; ?>
+<?php require "./template/footer.php"; ?>

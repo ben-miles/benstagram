@@ -24,6 +24,9 @@ switch ($request) {
 	case "/post" :
 		require "view/post.php";
 		break;
+	case "/post-logic" :
+		require "logic/post.php";
+		break;
     default:
         http_response_code(404);
         require "view/404.php";
