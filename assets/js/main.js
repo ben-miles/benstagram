@@ -204,6 +204,7 @@
 |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polyfill ::
 |*|
 |*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#a_little_vanilla_framework
 \*/
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
